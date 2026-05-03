@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_mo12";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&mo 5>;
+            bindings = <&mo 4>, <&mo 6>;
         };
 
         shift_ctl: shift_ctl {
@@ -91,7 +91,7 @@
             >;
         };
 
-        num-funcKey {
+        num-funcKey_layey {
             display-name = "num_funcKey";
             bindings = <
 &kp F1            &kp F2             &kp F3   &kp F4  &kp F5                   &kp AT_SIGN       &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
@@ -104,7 +104,7 @@
             >;
         };
 
-        func {
+        function_layer {
             bindings = <
 &trans              &trans      &trans         &trans                &trans                                &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME    &kp END
 &kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT   &kp SPACE
@@ -115,7 +115,21 @@
 &trans              &trans      &trans         &trans                &trans                                &trans                  &trans                   &trans       &trans      &trans
             >;
 
-            label = "function";
+            label = "func";
+        };
+
+        symbol_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
+&trans  &trans  &trans  &trans  &trans                  &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans                  &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans          &trans                &trans
+&trans  &trans  &trans                                                               &trans                &trans                 &trans
+&trans  &trans  &trans  &trans  &trans                  &trans       &trans          &trans                &trans                 &trans
+            >;
+
+            label = "symbol";
         };
 
         SECONDARY_LAYER {
