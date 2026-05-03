@@ -50,6 +50,14 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_SHIFT>, <&kp RCTRL>;
         };
+
+        lr_ralt: lr_ralt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&m_rf_ralt>;
+        };
     };
 
     combos {
@@ -73,6 +81,13 @@
             bindings = <&kp LS(T) &kp S &kp H &kp I &kp O &kp R &kp I &kp AT &kp NUMBER_0 &kp NUMBER_6 &kp NUMBER_0 &kp NUMBER_4 &kp ENTER>;
             label = "PW";
         };
+
+        m_rf_ralt: m_rf_ralt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <75>;
+            bindings = <&kp RALT>;
+        };
     };
 
     keymap {
@@ -84,7 +99,7 @@
 &kp Q              &kp W      &kp E         &kp R         &kp T                                         &kp Y     &kp U            &kp I          &kp O       &kp P
 &kp A              &kp S      &kp D         &kp F         &kp G                                         &kp H     &kp J            &kp K          &kp L       &kp ENTER
 &mt2 LEFT_SHIFT Z  &kp X      &kp C         &kp V         &kp B                                         &kp N     &kp M            &kp COMMA      &kp PERIOD  &kp BACKSPACE
-&kp GRAVE          &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &kp LEFT_SHIFT  &lt 4 BACKSPACE  &mo 3     &lt 2 RIGHT_ALT  &kp BACKSLASH  &kp SLASH   &shift_ctl
+&kp GRAVE          &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &kp LEFT_SHIFT  &lt 4 BACKSPACE  &mo 3     &lr_ralt 2 0  &kp BACKSLASH  &kp SLASH   &shift_ctl
                    &none      &kp RIGHT     &kp DOWN      &kp LEFT     &kp UP          &kp UP           &kp LEFT  &kp DOWN         &kp RIGHT      &kp F18
 &mkp LCLK          &mkp RCLK  &mkp MCLK                                                                                            &mkp LCLK      &mkp RCLK   &mkp MCLK
 &mkp MB4           &mkp MB5   &kp LG(TAB)   &kp LG(D)     &kp LCTRL                                     &mkp MB4  &mkp MB5         &kp LG(TAB)    &kp LG(D)   &kp LCTRL
