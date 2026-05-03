@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "td_mo12";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 4>;
+            bindings = <&mo 3>, <&mo 5>;
         };
 
         shift_ctl: shift_ctl {
@@ -91,8 +91,8 @@
             >;
         };
 
-        num-func {
-            display-name = "num_func";
+        num-funcKey {
+            display-name = "num_funcKey";
             bindings = <
 &kp F1            &kp F2             &kp F3   &kp F4  &kp F5                   &kp AT_SIGN       &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
 &kp F6            &kp F7             &kp F8   &kp F9  &kp F10                  &kp EQUAL         &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY
@@ -101,6 +101,18 @@
                   &trans             &trans   &trans  &trans   &trans  &trans  &trans            &trans             &trans           &trans
 &trans            &trans             &trans                                                                         &trans           &trans           &trans
 &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans  &trans                   &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
+            >;
+        };
+
+        func {
+            bindings = <
+&trans              &trans      &trans         &trans                &trans                                &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME    &kp END
+&kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT   &kp SPACE
+&kp LC(DOWN_ARROW)  &kp RET     &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                  &kp LCTRL               &kp C_PREVIOUS           &kp C_PAUSE  &kp C_NEXT  &kp DEL
+&trans              &trans      &trans         &trans                &trans                &trans  &trans  &trans                  &trans                   &trans       &trans      &kp RIGHT_ALT
+                    &kp C_MUTE  &kp C_VOL_UP   &trans                &kp C_VOL_DN          &trans  &trans  &trans                  &trans                   &trans       &trans
+&trans              &trans      &trans                                                                                                                      &trans       &trans      &trans
+&trans              &trans      &trans         &trans                &trans                                &trans                  &trans                   &trans       &trans      &trans
             >;
         };
 
