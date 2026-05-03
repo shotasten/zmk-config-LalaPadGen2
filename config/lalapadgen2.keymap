@@ -114,6 +114,8 @@
 &trans              &trans      &trans                                                                                                                      &trans       &trans      &trans
 &trans              &trans      &trans         &trans                &trans                                &trans                  &trans                   &trans       &trans      &trans
             >;
+
+            label = "function";
         };
 
         SECONDARY_LAYER {
