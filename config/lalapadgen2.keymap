@@ -106,13 +106,13 @@
 
         function_layer {
             bindings = <
-&trans              &trans      &trans         &trans                &trans                                &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME          &kp END
-&kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT         &kp SPACE
-&kp LC(DOWN_ARROW)  &kp RET     &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                  &kp LCTRL               &mkp MB4                 &trans       &mkp MB5          &kp DEL
-&trans              &trans      &trans         &trans                &trans                &trans  &trans  &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
-                    &kp C_MUTE  &kp C_VOL_UP   &trans                &kp C_VOL_DN          &trans  &trans  &kp K_PREVIOUS          &trans                   &kp C_NEXT   &kp C_PLAY_PAUSE
-&trans              &trans      &trans                                                                                                                      &trans       &trans            &trans
-&trans              &trans      &trans         &trans                &trans                                &trans                  &trans                   &trans       &trans            &trans
+&trans              &trans      &trans         &trans                &trans                                      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME          &kp END
+&kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                      &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT         &kp SPACE
+&kp LC(DOWN_ARROW)  &kp RET     &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                        &kp LCTRL               &mkp MB4                 &trans       &mkp MB5          &kp DEL
+&trans              &trans      &trans         &trans                &trans                &trans  &trans        &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
+                    &kp C_MUTE  &kp C_VOL_UP   &trans                &kp C_VOL_DN          &trans  &kp C_VOL_UP  &kp K_PREVIOUS          &kp C_VOL_DN             &kp C_NEXT   &kp C_PLAY_PAUSE
+&trans              &trans      &trans                                                                                                                            &trans       &trans            &trans
+&trans              &trans      &trans         &trans                &trans                                      &trans                  &trans                   &trans       &trans            &trans
             >;
 
             label = "func";
