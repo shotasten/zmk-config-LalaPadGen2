@@ -124,7 +124,7 @@
 &trans              &trans      &trans         &trans                &trans                                      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME          &kp END
 &kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                      &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT         &kp SPACE
 &kp LC(DOWN_ARROW)  &kp RET     &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                        &kp LCTRL               &mkp MB4                 &trans       &mkp MB5          &kp DEL
-&trans              &trans      &trans         &trans                &trans                &trans  &trans        &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
+&trans              &trans      &trans         &trans                &trans                &trans  &bt BT_SEL 0  &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
                     &kp C_MUTE  &kp C_VOL_UP   &trans                &kp C_VOL_DN          &trans  &kp C_VOL_UP  &kp K_PREVIOUS          &kp C_VOL_DN             &kp C_NEXT   &kp C_PLAY_PAUSE
 &trans              &trans      &trans                                                                                                                            &trans       &trans            &trans
 &trans              &trans      &trans         &trans                &trans                                      &trans                  &trans                   &trans       &trans            &trans
@@ -135,13 +135,13 @@
 
         symbol_layer {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR         &kp PERCENT                        &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
-&kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp GRAVE          &kp TILDE                          &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
-&kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                             &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
-&trans           &trans         &trans        &trans             &trans       &trans  &bt BT_SEL 0  &trans       &trans          &trans                &trans                 &kp SEMI
-                 &trans         &trans        &trans             &trans       &trans  &trans        &trans       &trans          &trans                &trans
-&trans           &trans         &trans                                                                                           &trans                &trans                 &trans
-&trans           &trans         &trans        &trans             &trans                             &trans       &trans          &trans                &trans                 &trans
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR         &kp PERCENT                  &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
+&kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp GRAVE          &kp TILDE                    &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
+&kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                       &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
+&trans           &trans         &trans        &trans             &trans       &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
+                 &trans         &trans        &trans             &trans       &trans  &trans  &trans       &trans          &trans                &trans
+&trans           &trans         &trans                                                                                     &trans                &trans                 &trans
+&trans           &trans         &trans        &trans             &trans                       &trans       &trans          &trans                &trans                 &trans
             >;
 
             label = "symbol";
