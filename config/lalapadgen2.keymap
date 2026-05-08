@@ -13,7 +13,7 @@
 
 #define MAC_BT_PROFILE 0
 #define WIN_BT_PROFILE 1
-#define MAC_SC_SCALE   1
+#define MAC_SC_SCALE   2
 #define WIN_SC_SCALE   10
 
 &mt { quick-tap-ms = <200>; };
