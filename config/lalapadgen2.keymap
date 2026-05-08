@@ -111,28 +111,28 @@
             >;
         };
 
-        num-funcKey_layey {
-            display-name = "num_funcKey";
+        num-func_layey {
+            display-name = "num_func";
             bindings = <
-&kp F1            &kp F2             &kp F3   &kp F4  &kp F5                   &kp AT_SIGN       &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
-&kp F6            &kp F7             &kp F8   &kp F9  &kp F10                  &kp EQUAL         &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY
-&kp F10           &kp F11            &kp F12  &trans  &trans                   &kp KP_DOT        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans            &trans             &trans   &trans  &pw      &pw     &trans  &kp ENTER         &kp KP_NUMBER_0    &kp BACKSPACE    &kp DELETE       &kp KP_PLUS
-                  &trans             &trans   &trans  &trans   &trans  &trans  &trans            &trans             &trans           &trans
-&trans            &trans             &trans                                                                         &trans           &trans           &trans
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans  &trans                   &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
+&trans              &trans             &trans         &trans                &trans                                &kp AT_SIGN       &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
+&kp LC(UP_ARROW)    &trans             &trans         &trans                &trans                                &kp EQUAL         &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY
+&kp LC(DOWN_ARROW)  &trans             &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                  &kp KP_DOT        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&trans              &trans             &trans         &trans                &pw                   &pw     &trans  &kp ENTER         &kp KP_NUMBER_0    &kp BACKSPACE    &kp DELETE       &kp KP_PLUS
+                    &trans             &trans         &trans                &trans                &trans  &trans  &trans            &trans             &trans           &trans
+&trans              &trans             &trans                                                                                                          &trans           &trans           &trans
+&kp LC(LG(LEFT))    &kp LC(LG(RIGHT))  &trans         &trans                &trans                                &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
             >;
         };
 
         function_layer {
             bindings = <
-&trans              &trans      &trans         &trans                &trans                                      &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME          &kp END
-&kp LC(UP_ARROW)    &trans      &trans         &trans                &trans                                      &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT         &kp SPACE
-&kp LC(DOWN_ARROW)  &kp RET     &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                        &kp LCTRL               &mkp MB4                 &trans       &mkp MB5          &kp DEL
-&trans              &trans      &trans         &trans                &trans                &trans  &bt BT_SEL 0  &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
-                    &kp C_MUTE  &kp C_VOL_UP   &trans                &kp C_VOL_DN          &trans  &kp C_VOL_UP  &kp K_PREVIOUS          &kp C_VOL_DN             &kp C_NEXT   &kp C_PLAY_PAUSE
-&trans              &trans      &trans                                                                                                                            &trans       &trans            &trans
-&trans              &trans      &trans         &trans                &trans                                      &trans                  &trans                   &trans       &trans            &trans
+&kp F1   &kp F2      &kp F3        &kp F4  &kp F5                              &kp LS(LG(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp UP       &kp HOME          &kp END
+&kp F6   &kp F7      &kp F8        &kp F9  &kp F10                             &kp LSHFT               &kp LEFT                 &kp DOWN     &kp RIGHT         &kp SPACE
+&kp F11  &kp F12     &trans        &trans  &trans                              &kp LCTRL               &mkp MB4                 &trans       &mkp MB5          &kp DEL
+&trans   &trans      &trans        &trans  &trans        &trans  &bt BT_SEL 0  &trans                  &trans                   &kp PAGE_UP  &kp PAGE_DOWN     &kp RIGHT_ALT
+         &kp C_MUTE  &kp C_VOL_UP  &trans  &kp C_VOL_DN  &trans  &kp C_VOL_UP  &kp K_PREVIOUS          &kp C_VOL_DN             &kp C_NEXT   &kp C_PLAY_PAUSE
+&trans   &trans      &trans                                                                                                     &trans       &trans            &trans
+&trans   &trans      &trans        &trans  &trans                              &trans                  &trans                   &trans       &trans            &trans
             >;
 
             label = "func";
