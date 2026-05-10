@@ -125,7 +125,7 @@
 &kp LCTRL          &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_ALT  &lt 1 SPACE  &kp LEFT_SHIFT  &lt 4 BACKSPACE  &mo 2     &lr_ralt 3 0  &kp BACKSLASH     &kp SLASH           &shift_ctl
                    &none           &kp RIGHT     &kp DOWN      &kp LEFT     &kp UP          &kp UP           &kp LEFT  &kp DOWN      &kp RIGHT         &kp F18
 &mkp LCLK          &mkp RCLK       &mkp MCLK                                                                                         &mkp LCLK         &mkp RCLK           &mkp MCLK
-&mkp MB4           &mkp MB5        &kp LG(TAB)   &kp LG(D)     &kp LCTRL                                     &mkp MB4  &mkp MB5      &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LEFT_GUI
+&mkp MB4           &mkp MB5        &kp LG(TAB)   &kp LG(D)     &kp LCTRL                                     &mkp MB4  &mkp MB5      &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LEFT_CONTROL
             >;
         };
 
