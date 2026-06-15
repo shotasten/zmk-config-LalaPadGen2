@@ -217,7 +217,7 @@
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR         &kp PERCENT                      &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
 &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp GRAVE          &kp TILDE                        &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
-&kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                           &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &win_alt_enter
+&kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                           &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
 &trans           &trans         &trans        &trans             &win_alt_release  &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
                  &trans         &win_alt_tab  &trans             &win_alt_shift_tab  &trans  &trans  &trans       &trans          &trans                &trans
 &trans           &trans         &trans                                                                                         &trans                &trans                 &trans
