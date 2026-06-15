@@ -144,7 +144,12 @@
             compatible = "zmk,behavior-macro";
             label = "WIN_ALT_ENTER";
             #binding-cells = <0>;
-            bindings = <&kt_off LALT>, <&kp ENTER>;
+            wait-ms = <50>;
+            tap-ms = <75>;
+            bindings
+                = <&kt_off LALT>
+                , <&macro_tap &kp ENTER>
+                ;
         };
 
         to_mac: to_mac {
