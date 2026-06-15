@@ -62,6 +62,18 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&m_rf_ralt>;
         };
+
+        kt_on: key_toggle_on_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            toggle-mode = "on";
+        };
+
+        kt_off: key_toggle_off_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
     };
 
     combos {
@@ -98,6 +110,51 @@
             bindings = <&kp RALT>;
         };
 
+        win_alt_tab: win_alt_tab {
+            compatible = "zmk,behavior-macro";
+            label = "WIN_ALT_TAB";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <75>;
+            bindings = <&kt_on LALT>, <&kp TAB>;
+        };
+
+        win_alt_shift_tab: win_alt_shift_tab {
+            compatible = "zmk,behavior-macro";
+            label = "WIN_ALT_SHIFT_TAB";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <75>;
+            bindings
+                = <&kt_on LALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        win_alt_release: win_alt_release {
+            compatible = "zmk,behavior-macro";
+            label = "WIN_ALT_RELEASE";
+            #binding-cells = <0>;
+            bindings = <&macro_release &kp LALT>;
+        };
+
+        win_alt_enter: win_alt_enter {
+            compatible = "zmk,behavior-macro";
+            label = "WIN_ALT_ENTER";
+            #binding-cells = <0>;
+            wait-ms = <75>;
+            tap-ms = <75>;
+            bindings
+                = <&kt_off LALT>
+                , <&macro_release &kp LALT>
+                , <&kt_off LALT>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+
         to_mac: to_mac {
             compatible = "zmk,behavior-macro";
             label = "TO_MAC";
@@ -120,10 +177,10 @@
             display-name = "Default";
             bindings = <
 &kp Q              &kp W               &kp E          &kp R         &kp T                                          &kp Y     &kp U         &kp I             &kp O               &kp P
-&kp A              &kp S               &kp D          &kp F         &kp G                                          &kp H     &kp J         &kp K             &kp L               &kp ENTER
+&kp A              &kp S               &kp D          &kp F         &kp G                                          &kp H     &kp J         &kp K             &kp L               &win_alt_enter
 &mt2 LEFT_SHIFT Z  &kp X               &kp C          &kp V         &kp B                                          &kp N     &kp M         &kp COMMA         &kp PERIOD          &kp BACKSPACE
 &kp LCTRL          &kp LG(LEFT_SHIFT)  &kp LEFT_GUI   &kp LEFT_ALT  &lt 1 SPACE   &kp LEFT_SHIFT  &lt 4 BACKSPACE  &mo 2     &lr_ralt 3 0  &kp BACKSLASH     &kp SLASH           &shift_ctl
-                   &kp LS(LA(SPACE))   &kp LC(RIGHT)  &kp LC(DOWN)  &kp LC(LEFT)  &kp LC(UP)      &kp UP           &kp LEFT  &kp DOWN      &kp RIGHT         &kp F18
+                   &kp LS(LA(SPACE))   &win_alt_tab   &kp LC(DOWN)  &win_alt_shift_tab  &kp LC(UP)      &kp UP           &kp LEFT  &kp DOWN      &kp RIGHT         &kp F18
 &mkp LCLK          &mkp RCLK           &mkp MCLK                                                                                           &mkp LCLK         &mkp RCLK           &mkp MCLK
 &mkp MB4           &mkp MB5            &kp LG(TAB)    &kp LG(D)     &kp LCTRL                                      &mkp MB4  &mkp MB5      &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LEFT_CONTROL
             >;
@@ -135,7 +192,7 @@
 &trans              &trans             &trans         &trans                &trans                                &kp AT_SIGN       &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
 &kp LC(UP_ARROW)    &trans             &trans         &trans                &trans                                &kp EQUAL         &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY
 &kp LC(DOWN_ARROW)  &trans             &kp LS(LG(S))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                  &kp KP_DOT        &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans              &trans             &trans         &trans                &pw                   &pw     &trans  &kp ENTER         &kp KP_NUMBER_0    &kp BACKSPACE    &kp DELETE       &kp KP_PLUS
+&trans              &trans             &trans         &trans                &pw                   &pw     &trans  &win_alt_enter    &kp KP_NUMBER_0    &kp BACKSPACE    &kp DELETE       &kp KP_PLUS
                     &trans             &trans         &trans                &trans                &trans  &trans  &trans            &trans             &trans           &trans
 &trans              &trans             &trans                                                                                                          &trans           &trans           &trans
 &kp LC(LG(LEFT))    &kp LC(LG(RIGHT))  &trans         &trans                &trans                                &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
@@ -161,8 +218,8 @@
 &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR         &kp PERCENT                      &kp AT_SIGN  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
 &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp GRAVE          &kp TILDE                        &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
 &kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                           &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
-&trans           &trans         &trans        &trans             &trans           &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
-                 &trans         &kp LG(TAB)   &trans             &kp LS(LG(TAB))  &trans  &trans  &trans       &trans          &trans                &trans
+&trans           &trans         &trans        &trans             &win_alt_release  &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
+                 &trans         &kp LC(RIGHT)  &trans            &kp LC(LEFT)     &trans  &trans  &trans       &trans          &trans                &trans
 &trans           &trans         &trans                                                                                         &trans                &trans                 &trans
 &trans           &trans         &trans        &trans             &trans                           &trans       &trans          &trans                &trans                 &trans
             >;
