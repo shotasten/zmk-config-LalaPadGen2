@@ -151,7 +151,7 @@
 &kp A              &kp S               &kp D          &kp F         &kp G                                          &kp H     &kp J         &kp K             &kp L               &kp ENTER
 &mt2 LEFT_SHIFT Z  &kp X               &kp C          &kp V         &kp B                                          &kp N     &kp M         &kp COMMA         &kp PERIOD          &kp BACKSPACE
 &kp LCTRL          &kp LG(LEFT_SHIFT)  &kp LEFT_GUI   &kp LEFT_ALT  &lt 1 SPACE   &kp LEFT_SHIFT  &lt 4 BACKSPACE  &mo 2     &lr_ralt 3 0  &kp BACKSLASH     &kp SLASH           &shift_ctl
-                   &kp LS(LA(SPACE))   &kp LC(RIGHT)  &kp LC(DOWN)  &kp LC(LEFT)  &kp LC(UP)      &kp UP           &kp LEFT  &kp DOWN      &kp RIGHT         &kp F18
+                   &kp LS(LA(SPACE))   &win_alt_tab   &kp LC(DOWN)  &win_alt_shift_tab  &kp LC(UP)      &kp UP           &kp LEFT  &kp DOWN      &kp RIGHT         &kp F18
 &mkp LCLK          &mkp RCLK           &mkp MCLK                                                                                           &mkp LCLK         &mkp RCLK           &mkp MCLK
 &mkp MB4           &mkp MB5            &kp LG(TAB)    &kp LG(D)     &kp LCTRL                                      &mkp MB4  &mkp MB5      &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LEFT_CONTROL
             >;
@@ -190,7 +190,7 @@
 &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp GRAVE          &kp TILDE                        &kp EQUAL    &kp PLUS        &kp LBKT              &kp RBKT               &kp DOUBLE_QUOTES
 &kp SEMICOLON    &kp COLON      &kp SQT       &kp DOUBLE_QUOTES  &trans                           &kp MINUS    &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON
 &trans           &trans         &trans        &trans             &win_alt_release  &trans  &trans  &trans       &trans          &trans                &trans                 &kp SEMI
-                 &trans         &win_alt_tab  &trans             &win_alt_shift_tab  &trans  &trans  &trans       &trans          &trans                &trans
+                 &trans         &kp LC(RIGHT)  &trans            &kp LC(LEFT)     &trans  &trans  &trans       &trans          &trans                &trans
 &trans           &trans         &trans                                                                                         &trans                &trans                 &trans
 &trans           &trans         &trans        &trans             &trans                           &trans       &trans          &trans                &trans                 &trans
             >;
