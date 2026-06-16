@@ -49,16 +49,20 @@ static int on_pressed(struct zmk_behavior_binding *binding,
     const struct behavior_alt_tab_timer_config *config = dev->config;
     struct behavior_alt_tab_timer_data *data = dev->data;
 
-    k_work_cancel_delayable(&data->release_work);
+    if (data->alt_pressed && data->alt_key != binding->param2) {
+        release_alt(data, event.timestamp);
+    }
 
     data->alt_key = binding->param2;
-    data->alt_pressed = true;
+    if (!data->alt_pressed) {
+        raise_zmk_keycode_state_changed_from_encoded(data->alt_key, true, event.timestamp);
+        data->alt_pressed = true;
+    }
 
-    raise_zmk_keycode_state_changed_from_encoded(data->alt_key, true, event.timestamp);
     raise_zmk_keycode_state_changed_from_encoded(binding->param1, true, event.timestamp);
     raise_zmk_keycode_state_changed_from_encoded(binding->param1, false, event.timestamp);
 
-    k_work_schedule(&data->release_work, K_MSEC(config->release_after_ms));
+    k_work_reschedule(&data->release_work, K_MSEC(config->release_after_ms));
 
     return 0;
 }
