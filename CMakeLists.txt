@@ -1,1 +1,1 @@
-target_sources(app PRIVATE src/behaviors/behavior_alt_tab_timer.c)
+target_sources_ifdef(CONFIG_ZMK_SPLIT_ROLE_CENTRAL app PRIVATE src/behaviors/behavior_alt_tab_timer.c)
