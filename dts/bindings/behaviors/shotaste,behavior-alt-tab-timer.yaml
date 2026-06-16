@@ -1,0 +1,13 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: MIT
+
+description: Timed Alt-Tab behavior
+
+compatible: "shotaste,behavior-alt-tab-timer"
+
+include: two_param.yaml
+
+properties:
+  release-after-ms:
+    type: int
+    default: 350
